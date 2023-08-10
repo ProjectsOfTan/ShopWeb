@@ -1,0 +1,470 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 15, 2023, 11:07:17 PM
+    Author     : wth0z
+*/
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Menu-style*/
+.menu ul{
+    list-style: none;
+    margin: 0;
+}
+.menu ul li a{
+    text-decoration: none;
+}
+.menu .navigation{
+    background: linear-gradient(to right, #1c7151, yellow)
+}
+.navigation ul{
+    display: flex;
+    justify-content: center
+}
+.navigation ul li a{
+    color: white;
+    font-size: 1.5em;
+    margin-right: 50px;
+}
+.navigation{
+    padding: 10px 0px;
+}
+.menu .contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact .phone_contact{
+    margin-right: 10%;
+    position: relative
+}
+.contact .mail_contact{
+    margin-left: 4%;
+    position: relative
+}
+.menu ion-icon{
+    font-size: 1.5em;
+}
+.contact{
+    background: black;
+    color: yellowgreen;
+
+}
+.contact label{
+    position: absolute;
+    bottom: 22%;
+    width: 130px;
+}
+.navigation ul li a:hover{
+    color: black;
+}
+.name_shop{
+    display: flex;
+    align-items: center;
+
+}
+.name_shop .name{
+    font-size: 2.3em;
+    width: 27%;
+}
+.name_shop .cart_login{
+    width: 25%;
+}
+.name_shop .search{
+    flex: 1;
+}
+
+.search{
+    position: relative;
+}
+
+.search button{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 2.1em;
+    cursor: pointer;
+    height: 53%;
+    padding: 0 10px;
+    border-radius: 0px 4px 4px 0px;
+    color: yellowgreen;
+}
+.search input{
+    margin-top: 20px;
+    width: 96%;
+    height: 42px;
+    border: 2px solid yellowgreen;
+    border-radius: 4px;
+    padding-left: 16px;
+    font-size: 1.2em;
+    padding-right: 40px;
+    overflow: hidden;
+}
+.search button:hover{
+    background: yellowgreen;
+    color: white;
+}
+
+.container_fix{
+    transition: 0.6s ease;
+}
+
+.container_fix.sticky{
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    align-items: center;
+    top: 0;
+    background: white;
+    box-shadow: 0px 0px 5px black;
+    transition: 0.6s ease;
+}
+#sale_hot{
+    color: red;
+}
+#sale_hot:hover{
+    color: black;
+}
+
+/*cart_login*/
+.cart_login{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.cart_login div{
+    margin-right: 80px;
+}
+.cart_login div a{
+    text-decoration: none;
+    color: yellowgreen;
+    display: inline-block;
+    border: 2px solid yellowgreen;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.cart_login div a:hover{
+    color: white;
+    background: yellowgreen;
+}
+
+/*login_register*/
+.person{
+    display: inline-block;
+    position: relative;
+}
+.login_register{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f1f1f1;
+}
+.person:hover .login_register{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: block;
+    right: .5px;
+    min-width: 160px;
+    height: 80px;
+    text-align: center;
+    padding: 0px;
+    border-radius: 5px;
+    overflow: hidden
+}
+
+.person li:hover{
+    background: yellowgreen;
+    color: white
+}
+
+.login_register li {
+    padding: 6px;
+}
+.login_register li a{
+    display: block;
+    margin: 0px;
+    border: none;
+}
+
+/*after login*/
+.person_logined{
+    display: inline-block;
+    position: relative;
+}
+
+.person_logined .person_img{
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.person_logined label{
+    position: absolute;
+    display: inline-block;
+    top: 30%;
+    padding-left: 5px;
+    font-size: 1.2em;
+}
+
+.after_login{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f1f1f1;
+}
+.person_logined:hover .after_login{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: block;
+    right: .5px;
+    min-width: 180px;
+    height: 105px;
+    text-align: center;
+    padding: 0px;
+    border-radius: 5px;
+    overflow: hidden
+}
+
+.person_logined li:hover{
+    background: yellowgreen;
+    color: white
+}
+
+.after_login li a{
+    display: block;
+    margin: 0px;
+    border: none;
+}
+
+.cart_login div #account_img:hover{
+    background: none;
+}
+
+/*footer*/
+.footer{
+    background: #747474;
+    display: flex;
+    justify-content: space-around;
+    color: yellowgreen;
+}
+
+.footer h2{
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.footer-widget{
+    text-align: center;
+
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.footer a{
+    display: inline-block;
+    border: 1px solid yellowgreen;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+.footer-widget i {
+    margin-right: 7px;
+}
+.footer a ion-icon{
+    color: yellowgreen;
+    font-size: 1.7em;
+}
+
+.body{
+    flex: 1;
+}
+/*show quantity*/
+.cart_lb{
+    position: relative;
+}
+.cart_lb .si_co{
+    position: absolute;
+    top: 0px;
+    left: 6px;
+    height: 18.5px;
+    background: yellowgreen;
+    color: white;
+    border: .125rem solid yellowgreen;
+    padding: 0px 3px;
+    border-radius: 45%;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.cart_lb:hover .si_co{
+    background: white;
+    color: yellowgreen;
+}
+
+/*body*/
+.body{
+    display: flex;
+    margin: 10px 0;
+}
+
+.body .filter{
+    width: 25%;
+}
+
+.body .list_product{
+    flex: 1;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 15px;
+    margin-right: 15px;
+    row-gap: 15px;
+}
+
+.body .list_product .product_item_box{
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.product_item_box .discount{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: inline-block;
+    background: #CD151C;
+    color: white;
+    width: 20%;
+    text-align: center;
+    height: 24px;
+    margin: auto;
+    border-radius: 0 0 0 5px;
+}
+
+.body .list_product .product_item_box a{
+    color: black;
+    text-decoration: none;
+}
+
+.body .list_product .product_item_box .after_discount{
+    color: #CD151C;
+    font-weight: bold;
+}
+
+.list_product .product_item_box{
+    height: 510px;
+    box-shadow: 0 0 2px black;
+}
+
+.body .list_product .product_item_box .price_notdiscount{
+    color: #CD151C;
+    font-weight: bold;
+}
+
+.body .list_product img{
+    width: 100%;
+    height: 371px;
+}
+
+.price_product{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.name_product{
+    font-size: 1.1em;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.price_product .after_discount{
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.price_product .price_unit{
+    color: #8A8A8F;
+    text-decoration: line-through;
+}
+
+.product_item:hover  .name_product{
+    color: #ffe818;
+}
+
+.product_item a .img{
+    overflow: hidden;
+}
+
+.product_item:hover img{
+    transform: scale(1.1,1.1);
+}
+
+.product_item:hover .add_product{
+    opacity: 1;
+}
+
+.add_product{
+    opacity: 0;
+    text-align: center;
+    font-size: 1.4em;
+    color: white;
+    background: #ffe818;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.title{
+    text-align: center;
+    font-family: Sofia, sans-serif;
+    margin-top: 30px;
+}
+
+.filter{
+    display: flex;
+    justify-content: center;
+}
+
+.filter_box{
+    width: 70%;
+    background: #cdcbcb;
+    padding: 20px;
+}
+
+.title_cate{
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+
+.size_container .cate_pro_box{
+    display:inline-grid;
+    grid-template-columns: auto auto auto auto;
+}

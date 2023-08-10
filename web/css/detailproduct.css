@@ -1,0 +1,482 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 12, 2023, 1:54:12 PM
+    Author     : wth0z
+*/
+body{
+    min-width: 100vh;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    position: relative;
+}
+
+/*Menu-style*/
+.menu ul{
+    list-style: none;
+    margin: 0;
+}
+.menu ul li a{
+    text-decoration: none;
+}
+.menu .navigation{
+    background: linear-gradient(to right, #1c7151, yellow)
+}
+.navigation ul{
+    display: flex;
+    justify-content: center
+}
+.navigation ul li a{
+    color: white;
+    font-size: 1.5em;
+    margin-right: 50px;
+}
+.navigation{
+    padding: 10px 0px;
+}
+.menu .contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact .phone_contact{
+    margin-right: 10%;
+    position: relative
+}
+.contact .mail_contact{
+    margin-left: 4%;
+    position: relative
+}
+.menu ion-icon{
+    font-size: 1.5em;
+}
+.contact{
+    background: black;
+    color: yellowgreen;
+
+}
+.contact label{
+    position: absolute;
+    bottom: 22%;
+    width: 130px;
+}
+.navigation ul li a:hover{
+    color: black;
+}
+.name_shop{
+    display: flex;
+    align-items: center;
+    
+}
+.name_shop .name{
+    font-size: 2.3em;
+    width: 27%;
+}
+.name_shop .cart_login{
+    width: 25%;
+}
+.name_shop .search{
+    flex: 1;
+}
+
+.search{
+    position: relative;
+}
+
+.search button{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 2.1em;
+    cursor: pointer;
+    height: 53%;
+    padding: 0 10px;
+    border-radius: 0px 4px 4px 0px;
+    color: yellowgreen;
+}
+.search input{
+    margin-top: 20px; 
+    width: 96%;
+    height: 42px;
+    border: 2px solid yellowgreen;
+    border-radius: 4px;
+    padding-left: 16px;
+    font-size: 1.2em;
+    padding-right: 40px;
+    overflow: hidden;
+}
+.search button:hover{
+    background: yellowgreen;
+    color: white;
+}
+
+.container_fix{
+    transition: 0.6s ease;
+}
+
+#sale_hot{
+    color: red;
+}
+#sale_hot:hover{
+    color: black;
+}
+
+/*cart_login*/
+.cart_login{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.cart_login div{
+    margin-right: 80px;
+}
+.cart_login div a{
+    text-decoration: none;
+    color: yellowgreen;
+    display: inline-block;
+    border: 2px solid yellowgreen;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.cart_login div a:hover{
+    color: white;
+    background: yellowgreen;
+}
+
+/*login_register*/
+.person{
+    display: inline-block;
+    position: relative;
+}
+.login_register{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f1f1f1;
+}
+.person:hover .login_register{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: block;
+    right: .5px;
+    min-width: 160px;
+    height: 80px;
+    text-align: center;
+    padding: 0px;
+    border-radius: 5px;
+    overflow: hidden
+} 
+
+.person li:hover{
+    background: yellowgreen;
+    color: white
+} 
+
+.login_register li {
+    padding: 6px;
+}
+.login_register li a{
+    display: block;
+    margin: 0px;
+    border: none;
+}
+
+/*after login*/
+.person_logined{
+    display: inline-block;
+    position: relative;
+}
+
+.person_logined .person_img{
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.person_logined label{
+    position: absolute;
+    display: inline-block;
+    top: 30%;
+    padding-left: 5px;
+    font-size: 1.2em;
+}
+
+.after_login{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f1f1f1;
+}
+.person_logined:hover .after_login{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: block;
+    right: .5px;
+    min-width: 180px;
+    height: 105px;
+    text-align: center;
+    padding: 0px;
+    border-radius: 5px;
+    overflow: hidden
+} 
+
+.person_logined li:hover{
+    background: yellowgreen;
+    color: white
+} 
+
+.after_login li a{
+    display: block;
+    margin: 0px;
+    border: none;
+}
+
+.login div #account_img:hover{
+    background: none;
+}
+
+/*footer*/
+.footer{
+    background: #747474;
+    display: flex;
+    justify-content: space-around;
+    color: yellowgreen;
+}
+
+.footer h2{
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.footer-widget{
+    text-align: center;
+
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.footer a{
+    display: inline-block;
+    border: 1px solid yellowgreen;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+.footer-widget i {
+    margin-right: 7px;
+}
+.footer a ion-icon{
+    color: yellowgreen;
+    font-size: 1.7em;
+}
+
+/*container*/
+.body{
+    background: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 0 3px black;
+    border-radius: 3px;
+    width: 80%;
+}
+.container .img_desc{
+    width: 40%;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.container .img_desc img{
+    width: 400px;
+    height: 535px;
+    border-radius: 3px;
+}
+
+.container .attribute_pro{
+    flex: 1
+}
+.container .attribute_pro .color_product .img_item img{
+    width: 42px;
+    height: 42px;
+    border-radius: 7px;
+    padding: 4px;
+}
+
+.container .attribute_pro .color_product .img_item{
+    display: inline-block;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+
+.container .attribute_pro .color_product .img_item:hover{
+    border: 2px solid #EF036C;
+    border-radius: 3px;
+}
+
+.price_product .price_notdiscount{
+    color: #CD151C;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.attribute_pro{
+    background: yellowgreen;
+    padding-left: 15px;
+}
+
+.color_product a{
+    text-decoration: none;
+}
+
+.color_product .img_current{
+    display: inline-block;
+    border: 2px solid #EF036C;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.color_product .img_current img{
+    width: 42px;
+    height: 42px;
+    padding: 3px;
+    border-radius: 7px;
+}
+
+.desc_box li {
+    line-height: 1.5em;
+}
+
+.size_product .list_size{
+    display: flex;
+}
+
+.size_product .list_size .size{
+    height: 2em;
+    width: 4em;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background: #e8e8e8;
+    margin-right: 10px;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+.after_discount{
+    color: #CD151C;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.price_unit{
+    color: #d2d2d2;
+    text-decoration: line-through;
+    font-size: 1.3em;
+    margin: 0 10px;
+}
+
+.discount{
+    color: white;
+    background: #CD151C;
+}
+
+
+/*quantity*/
+.quantity{
+    display: flex;
+    border-radius: 45px;
+}
+
+.quan_btn{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+.quantity input[type = "number"]{
+    padding-left: 10px;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    background: white;
+}
+
+.quantity input[type = "number"]::-webkit-outer-spin-button,
+.quantity input[type = "number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity button{
+    color: #3264fe;
+    background: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold
+}
+#decre{
+    width: 47.53px;
+    font-size: 35px;
+    padding: 15px 5px 15px 25px;
+    border-radius: 45px 0 0 45px;
+}
+#incre{
+    padding: 15px 25px 15px 5px;
+    border-radius:  0 45px 45px 0;
+}
+.btn input{
+    border: none;
+    width: 12em;
+    height: 5em;
+    border-radius: 45px;
+    font-weight: bold;
+    font-size: .9em;
+    background: #EF036C;
+    color: white;
+    cursor: pointer;
+}
+
+.btn input:hover{
+    background: #ffc0cb;
+    color: #EF036C;
+}
+
+/*show quantity*/
+.cart_lb{
+    position: relative;
+}
+.cart_lb .si_co{
+    position: absolute;
+    top: 0px;
+    left: 6px;
+    height: 18.5px;
+    background: yellowgreen;
+    color: white;
+    border: .125rem solid yellowgreen;
+    padding: 0px 3px;
+    border-radius: 45%;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.cart_lb:hover .si_co{
+    background: white;
+    color: yellowgreen;
+}
+

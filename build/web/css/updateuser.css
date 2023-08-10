@@ -1,0 +1,733 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 16, 2023, 1:07:06 PM
+    Author     : wth0z
+*/
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Menu-style*/
+.menu ul{
+    list-style: none;
+    margin: 0;
+}
+.menu ul li a{
+    text-decoration: none;
+}
+.menu .navigation{
+    background: linear-gradient(to right, #1c7151, yellow)
+}
+.navigation ul{
+    display: flex;
+    justify-content: center
+}
+.navigation ul li a{
+    color: white;
+    font-size: 1.5em;
+    margin-right: 50px;
+}
+.navigation{
+    padding: 10px 0px;
+}
+.menu .contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact .phone_contact{
+    margin-right: 10%;
+    position: relative
+}
+.contact .mail_contact{
+    margin-left: 4%;
+    position: relative
+}
+.menu ion-icon{
+    font-size: 1.5em;
+}
+.contact{
+    background: black;
+    color: yellowgreen;
+
+}
+.contact label{
+    position: absolute;
+    bottom: 22%;
+    width: 130px;
+}
+.navigation ul li a:hover{
+    color: black;
+}
+.name_shop{
+    display: flex;
+    align-items: center;
+
+}
+.name_shop .name{
+    font-size: 2.3em;
+    width: 27%;
+}
+.name_shop .cart_login{
+    width: 25%;
+}
+.name_shop .search{
+    flex: 1;
+}
+
+.search{
+    position: relative;
+}
+
+.search button{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 2.1em;
+    cursor: pointer;
+    height: 53%;
+    padding: 0 10px;
+    border-radius: 0px 4px 4px 0px;
+    color: yellowgreen;
+}
+.search input{
+    margin-top: 20px;
+    width: 96%;
+    height: 42px;
+    border: 2px solid yellowgreen;
+    border-radius: 4px;
+    padding-left: 16px;
+    font-size: 1.2em;
+    padding-right: 40px;
+    overflow: hidden;
+}
+.search button:hover{
+    background: yellowgreen;
+    color: white;
+}
+
+.container_fix{
+    transition: 0.6s ease;
+}
+
+.container_fix.sticky{
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    align-items: center;
+    top: 0;
+    background: white;
+    box-shadow: 0px 0px 5px black;
+    transition: 0.6s ease;
+}
+#sale_hot{
+    color: red;
+}
+#sale_hot:hover{
+    color: black;
+}
+
+/*cart_login*/
+.cart_login{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.cart_login div{
+    margin-right: 80px;
+}
+.cart_login div a{
+    text-decoration: none;
+    color: yellowgreen;
+    display: inline-block;
+    border: 2px solid yellowgreen;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.cart_login div a:hover{
+    color: white;
+    background: yellowgreen;
+}
+
+/*login_register*/
+.person{
+    display: inline-block;
+    position: relative;
+}
+.login_register{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f1f1f1;
+}
+.person:hover .login_register{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: block;
+    right: .5px;
+    min-width: 160px;
+    height: 80px;
+    text-align: center;
+    padding: 0px;
+    border-radius: 5px;
+    overflow: hidden
+}
+
+.person li:hover{
+    background: yellowgreen;
+    color: white
+}
+
+.login_register li {
+    padding: 6px;
+}
+.login_register li a{
+    display: block;
+    margin: 0px;
+    border: none;
+}
+
+/*after login*/
+.person_logined{
+    display: inline-block;
+    position: relative;
+}
+
+.person_logined .person_img{
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.person_logined label{
+    position: absolute;
+    display: inline-block;
+    top: 30%;
+    padding-left: 5px;
+    font-size: 1.2em;
+}
+
+.after_login{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f1f1f1;
+}
+.person_logined:hover .after_login{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: block;
+    right: .5px;
+    min-width: 180px;
+    height: 105px;
+    text-align: center;
+    padding: 0px;
+    border-radius: 5px;
+    overflow: hidden
+}
+
+.person_logined li:hover{
+    background: yellowgreen;
+    color: white
+}
+
+.after_login li a{
+    display: block;
+    margin: 0px;
+    border: none;
+}
+
+.cart_login div #account_img:hover{
+    background: none;
+}
+
+/*footer*/
+.footer{
+    background: #747474;
+    display: flex;
+    justify-content: space-around;
+    color: yellowgreen;
+}
+
+.footer h2{
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.footer-widget{
+    text-align: center;
+
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.footer a{
+    display: inline-block;
+    border: 1px solid yellowgreen;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 8px;
+}
+.footer-widget i {
+    margin-right: 7px;
+}
+.footer a ion-icon{
+    color: yellowgreen;
+    font-size: 1.7em;
+}
+
+.body{
+    flex: 1;
+}
+
+.show{
+    position: absolute;
+    right: 5%;
+    top: .8rem;
+}
+.show input{
+    width: 25%;
+    padding: 5px 0px;
+    padding-left: 10px;
+    border-radius: 3px;
+}
+.page_user{
+    display: flex;
+    height: 10%;
+    /*padding: 20px 0px;*/
+    justify-content: center;
+    align-items: center
+}
+
+.page_user a{
+    display: block;
+    width: 40px;
+    border: 1px solid gray;
+    padding: 8px 0px;
+    margin: 0px 4px;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: gray;
+    font-weight: bold
+}
+
+.page_user .marked{
+    border: 1px solid gray;
+    background: #00A300;
+    color: white;
+}
+
+.page_user a:hover{
+    border: 1px solid gray;
+    background: gray;
+    color: black;
+}
+.adduser_box{
+    width: 80%;
+    border: 1px solid gray;
+}
+.upload{
+    position: relative;
+    width: 100px;
+    margin: auto
+}
+.default_img{
+    border-radius: 50%;
+    border: 6px solid silver
+}
+
+.default_img.checked{
+    display: none
+}
+
+#display_img.checked{
+    border-radius: 50%;
+    border: 6px solid silver;
+    width: 100px;
+    height: 100px;
+    overflow: hidden
+}
+
+.upload{
+    position: relative;
+    width: 100px;
+    margin: auto
+}
+
+.upload .round{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #00B4FF;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.upload .round input[type='file']{
+    position: absolute;
+    transform: scale(2);
+    opacity: 0
+}
+
+.upload img{
+    
+}
+
+input[type='file']::-webkit-file-upload-button{
+    cursor: pointer
+}
+.user_input .label{
+    color: #45b6fe;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: 25%;
+}
+.user_input .value_user{
+    margin-left: 25%;
+    margin-top: 10px;
+}
+.user_input input[type='text']{
+    width: 30rem;
+    height: 2.1rem;
+    border: 2px solid silver;
+    border-radius: 15px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 5px gray
+}
+.user_input input[type='text']:focus{
+    border: 2px solid blue;
+    outline: blue;
+}
+
+.user_input input[type='email']{
+    width: 30rem;
+    height: 2.1rem;
+    border: 2px solid silver;
+    border-radius: 15px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 5px gray
+}
+.user_input input[type='email']:focus{
+    border: 2px solid blue;
+    outline: blue;
+}
+.user_input input[type='password']{
+    width: 30rem;
+    height: 2.1rem;
+    border: 2px solid silver;
+    border-radius: 15px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 5px gray
+}
+.user_input input[type='password']:focus{
+    border: 2px solid blue;
+    outline: blue;
+}
+.adduser_box{
+    height: 97%;
+}
+.user_input input[type='number']{
+    width: 30rem;
+    height: 2.1rem;
+    border: 2px solid silver;
+    border-radius: 15px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 5px gray
+}
+.user_input input[type='number']:focus{
+    border: 2px solid blue;
+    outline: blue;
+}
+
+.user_input input[type='date']{
+    width: 30rem;
+    height: 2.1rem;
+    border: 2px solid silver;
+    border-radius: 15px;
+    padding-left: 30px;
+}
+
+.value_user input[type='radio']{
+    margin-left: 40px;
+}
+
+#btn_adduser{
+    margin-left: 25%;
+    margin-top: 19px;
+    background: #00A300;
+    border: none;
+    color: white;
+    width: 32rem;
+    height: 2.3rem;
+    border-radius: 15px;
+}
+
+.body_listuser{
+    padding-bottom: 100px;
+    
+}
+
+.adduser_box{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border: 2px solid gray;
+    box-shadow: 0px 0px 3px gray;
+    
+}
+.user_input{
+    position: relative;
+}
+.pencil-sharp{
+    position: absolute;
+    left: 26%;
+    top: 60%;
+    font-size: 1.2rem;
+    color: blue;
+}
+
+.table_product,.table_product td, .table_product th{
+    border: 3px solid silver;
+    border-collapse: collapse;
+}
+
+.table_product td, .table_product th{
+    padding: 10px 10px;
+}
+
+.table_product tr:nth-child(even){
+    background-color: #dddddd;
+}
+table{
+    width: 100%
+}
+.user_input textarea{
+    width: 30rem;
+    border: 2px solid silver;
+    border-radius: 15px;
+    padding-left: 30px;
+    box-shadow: 0px 0px 5px gray;
+    resize: none;
+    
+}
+.user_input textarea:focus{
+    border: 2px solid blue;
+    outline: blue;
+}
+#textarea{
+    top: 50%;
+}
+.format_product{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance:none;
+    outline: none;
+    box-shadow: none;
+    border: 0!important;
+    background: #37b4aa;
+}
+.format_product::-ms-expand{
+    display: none
+}
+.select{
+    position: relative;
+    display: flex;
+    width: 32em;
+    height: 3em;
+    line-height: 3;
+    background: #5c6664;
+    overflow: hidden;
+    border-radius: .25em;
+    margin-left: 25%;
+}
+.format_product{
+    flex: 1;
+    padding: 0 .5em;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+.select::after{
+    content: '\25BC';
+    position: absolute;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    color: white;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+}
+.select:hover::after{
+    color: #23b499;
+}
+.form_upload{
+    width: 513px;
+    margin-left: 25%;
+}
+.image_upload{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+}
+.image_upload::after{
+    content: attr(data-text);
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    background: #fff;
+    padding: 10px 15px;
+    display: block;
+    width: calc(100% - 40px);
+    pointer-events: none;
+    z-index: 20;
+    height: 38px;
+    line-height: 40px;
+    color: #999;
+    border: 1px solid #24C6DC;
+    border-radius: 5px 10px 10px 5px;
+    font-weight: 300
+}
+.image_upload::before{
+    content: "Tải";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    height: 60px;
+    background: -webkit-linear-gradient(to right, #24C6DC, #514A9D);
+    background: linear-gradient(to right, #24C6DC, #514A9D);
+    color: #fff;
+    font-weight: 700;
+    z-index: 25;
+    font-size: 16px;
+    line-height: 60px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    pointer-events: none;
+    border-radius: 0 5px 5px 0;
+    transition: .5s ease-in-out;
+}
+.image_upload:hover::before{
+    background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);
+    background: linear-gradient(to right, #514A9D, #24C6DC);
+}
+.image_upload input{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+}
+.table_pro{
+    width: 50%;
+    margin: auto
+}
+.default_img{
+    border-radius: 50%;
+    border: 6px solid silver;
+    width: 100px;
+}
+
+.default_img.checked{
+    display: none
+}
+
+#display_img.checked{
+    border-radius: 50%;
+    border: 6px solid silver;
+    width: 100px;
+    height: 100px;
+    overflow: hidden
+}
+.body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.body_listuser{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.search input{
+    margin-top: 20px;
+    width: 89%;
+    height: 42px;
+    border: 2px solid yellowgreen;
+    border-radius: 4px;
+    padding-left: 16px;
+    font-size: 1.2em;
+    padding-right: 40px;
+    overflow: hidden;
+}
+
+
+.cart_login .cart_lb {
+    position: relative;
+}
+
+.search button{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 21px;
+    right: 1.5em;
+    cursor: pointer;
+    height: 69%;
+    padding: 0 10px;
+    border-radius: 0px 4px 4px 0px;
+    color: yellowgreen;
+}
+
+.cart_lb .si_co{
+    position: absolute;
+    top: 0px;
+    left: 6px;
+    height: 18.5px;
+    background: yellowgreen;
+    color: white;
+    border: .125rem solid yellowgreen;
+    padding: 0px 3px;
+    border-radius: 45%;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+
+.cart_lb:hover .si_co{
+    background: white;
+    color: yellowgreen;
+}
